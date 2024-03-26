@@ -15,14 +15,12 @@ class Team{
     this.factions=factions
   }
   
-  generate(size=2){
-    let factions=[]
-    while(factions.length<size) factions.push(rpg.pick(this.factions))
-    return factions
-  }
-  
-  get name(){
-    return `Team ${String.fromCharCode(97+teams.indexOf(this)).toUpperCase()}`
+  generate(size,allowed){
+    let factions=this.factions.filter(f=>allowed.includes(f))
+    if(factions.length==0) return []
+    let team=[]
+    while(team.length<size) team.push(rpg.pick(factions))
+    return team
   }
 }
 

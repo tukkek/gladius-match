@@ -1,5 +1,15 @@
-#teams{
-  margin-top:1em;
+body>div{
+  margin-bottom:1em;
+}
+#allowed{
+  text-align:center;
+}
+#allowed>div{
+  white-space:nowrap;
+  display:inline-block;
+}
+#allowed label{
+  margin:.5em;
 }
 .team .name{
   font-weight:bold;
